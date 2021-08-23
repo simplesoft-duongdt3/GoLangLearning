@@ -1,0 +1,11 @@
+Crtl + Shift + P -> Go: Install/Update Tools -> Select All -> OK -> Install package for Go
+
+go mod init tinyappsteam.com/hello
+=> This command will create go.mod file
+
+go run helloworld.go
+=> run helloworld.go file
+
+
+go build helloworld.go
+=> build helloworld file
