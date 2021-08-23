@@ -9,3 +9,6 @@ go run helloworld.go
 
 go build helloworld.go
 => build helloworld file
+
+
+Next: https://www.w3schools.com/go/go_data_types.php

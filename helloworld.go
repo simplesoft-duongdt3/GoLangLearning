@@ -11,17 +11,22 @@ func main() {
 	fmt.Println("Hello Duong!")
 
 	var name string = "Duong"
-	var age = 31
-	var numOfChild int
+	var isSingle bool = false
+	var isHaveChild = true
+	var gradeAvg float32 = 8.00001
+	var age int64 = 31
+	var numOfChild uint
 	numOfWife := 1
 
 	numOfChild = 2
 
-	fmt.Println(name)
-	fmt.Println(age)
-	fmt.Println(numOfChild)
-	fmt.Println(numOfWife)
-
+	fmt.Printf("name Type: %T, value: %v\n", name, name)
+	fmt.Printf("isSingle Type: %T, value: %v\n", isSingle, isSingle)
+	fmt.Printf("isHaveChild Type: %T, value: %v\n", isHaveChild, isHaveChild)
+	fmt.Printf("gradeAvg Type: %T, value: %v\n", gradeAvg, gradeAvg)
+	fmt.Printf("age Type: %T, value: %v\n", age, age)
+	fmt.Printf("numOfChild Type: %T, value: %v\n", numOfChild, numOfChild)
+	fmt.Printf("numOfWife Type: %T, value: %v\n", numOfWife, numOfWife)
 }
 
 /*
