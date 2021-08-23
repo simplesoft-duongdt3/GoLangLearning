@@ -6,9 +6,8 @@ import (
 
 const GO_NAME string = "Go"
 
-//This is main function, will start first when your program start
-func main() {
-	fmt.Println("Hello Duong!")
+func demo001Type() {
+	fmt.Println("\ndemo001Type")
 
 	var name string = "Duong"
 	var isSingle bool = false
@@ -27,6 +26,28 @@ func main() {
 	fmt.Printf("age Type: %T, value: %v\n", age, age)
 	fmt.Printf("numOfChild Type: %T, value: %v\n", numOfChild, numOfChild)
 	fmt.Printf("numOfWife Type: %T, value: %v\n", numOfWife, numOfWife)
+}
+
+func demo002Array() {
+	fmt.Println("\ndemo002Array")
+	var fixSizeGrades = [5]float32{8, 7, 9, 6.5, 3}
+
+	fmt.Printf("fixSizeGrades Type: %T, value: %v\n", fixSizeGrades, fixSizeGrades)
+	fmt.Printf("fixSizeGrades[1] Type: %T, value: %v\n", fixSizeGrades[1], fixSizeGrades[1])
+
+	autoSizeGrades := [...]float32{1.5, 9.3, 8, 7, 9, 6.5, 3}
+	fmt.Printf("autoSizeGrades Type: %T, value: %v\n", autoSizeGrades, autoSizeGrades)
+	var defaultZeroGrades = [10]float32{8, 9.1}
+	var defaultInitWithIndexGrades = [10]float32{0: 8, 5: 9.1}
+
+	fmt.Printf("defaultZeroGrades Type: %T, value: %v\n", defaultZeroGrades, defaultZeroGrades)
+	fmt.Printf("defaultInitWithIndexGrades Type: %T, value: %v\n", defaultInitWithIndexGrades, defaultInitWithIndexGrades)
+}
+
+//This is main function, will start first when your program start
+func main() {
+	demo001Type()
+	demo002Array()
 }
 
 /*
