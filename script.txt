@@ -11,4 +11,8 @@ go build helloworld.go
 => build helloworld file
 
 
-Next: https://www.w3schools.com/go/go_data_types.php
+1. https://www.w3schools.com/go/go_data_types.php
+2. https://www.w3schools.com/go/go_slices.php
+    ref: https://freshman.tech/snippets/go/copy-slices/
+
+Next : https://www.w3schools.com/go/go_conditions.php

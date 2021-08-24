@@ -44,10 +44,47 @@ func demo002Array() {
 	fmt.Printf("defaultInitWithIndexGrades Type: %T, value: %v\n", defaultInitWithIndexGrades, defaultInitWithIndexGrades)
 }
 
+func demo003Slice() {
+	fmt.Println("\ndemo003Slice")
+	var sliceEmpty1 = []string{}
+	fmt.Printf("sliceEmpty1 Type: %T, value: %v\n", sliceEmpty1, sliceEmpty1)
+
+	sliceEmpty2 := []string{}
+	fmt.Printf("sliceEmpty2 Type: %T, value: %v\n", sliceEmpty2, sliceEmpty2)
+
+	sliceFull := []int{1, 2, 3}
+	fmt.Printf("sliceFull Type: %T, value: %v len=%v cap=%v\n", sliceFull, sliceFull, len(sliceFull), cap(sliceFull))
+
+	var childArray = [4]string{"Chip", "Khia", "Cua", "Cong"}
+	var sliceChild1 = childArray[0:2]
+	fmt.Printf("sliceChild1 Type: %T, value: %v len=%v cap=%v\n", sliceChild1, sliceChild1, len(sliceChild1), cap(sliceChild1))
+
+	//cap depen on lengh of array (from start to end)
+	var sliceChild2 = childArray[1:3]
+	fmt.Printf("sliceChild2 Type: %T, value: %v len=%v cap=%v\n", sliceChild2, sliceChild2, len(sliceChild2), cap(sliceChild2))
+
+	sliceAnimal1 := make([]int, 5, 10)
+	fmt.Printf("sliceAnimal1 Type: %T, value: %v len=%v cap=%v\n", sliceAnimal1, sliceAnimal1, len(sliceAnimal1), cap(sliceAnimal1))
+
+	sliceAnimal2 := make([]string, 5)
+	fmt.Printf("sliceAnimal2 Type: %T, value: %v len=%v cap=%v\n", sliceAnimal2, sliceAnimal2, len(sliceAnimal2), cap(sliceAnimal2))
+
+	var child1 = sliceChild1[0]
+	fmt.Printf("child1 Type: %T, value: %v\n", child1, child1)
+
+	var animal1 = sliceAnimal2[0]
+	fmt.Printf("animal1 Type: %T, value: %v len=%v\n", animal1, animal1, len(animal1))
+
+	sliceAnimal2 = append(sliceAnimal2, "Heo", "ga")
+	fmt.Printf("sliceAnimal2 Type: %T, value: %v len=%v cap=%v\n", sliceAnimal2, sliceAnimal2, len(sliceAnimal2), cap(sliceAnimal2))
+}
+
+
 //This is main function, will start first when your program start
 func main() {
 	demo001Type()
 	demo002Array()
+	demo003Slice()
 }
 
 /*
