@@ -79,12 +79,73 @@ func demo003Slice() {
 	fmt.Printf("sliceAnimal2 Type: %T, value: %v len=%v cap=%v\n", sliceAnimal2, sliceAnimal2, len(sliceAnimal2), cap(sliceAnimal2))
 }
 
+func demo004If() {
+	fmt.Println("\ndemo004ControlFlow")
+	var englishGrade float32 = 7.8
+	var mathGrade float32 = 6.5
+	if englishGrade > mathGrade {
+		fmt.Printf("You learn English better Math englishGrade: %v, mathGrade: %v\n", englishGrade, mathGrade)
+	} else if mathGrade > englishGrade {
+		fmt.Printf("You learn Math better English mathGrade: %v, englishGrade: %v\n", mathGrade, englishGrade)
+	} else {
+		fmt.Printf("You learn Math equal English mathGrade: %v, englishGrade: %v\n", mathGrade, englishGrade)
+	}
+}
+
+func demo005Switch() {
+	fmt.Println("\ndemo005Switch")
+
+	day := 4
+
+	fmt.Printf("day: %v\n", day)
+	switch day {
+	case 1:
+		fmt.Println("Monday")
+	case 2:
+		fmt.Println("Tuesday")
+	case 3:
+		fmt.Println("Wednesday")
+	case 4:
+		fmt.Println("Thursday")
+	case 5:
+		fmt.Println("Friday")
+	case 6:
+		fmt.Println("Saturday")
+	case 7:
+		fmt.Println("Sunday")
+	default:
+		fmt.Println("Not a weekday")
+	}
+
+	switch day {
+	case 1, 3, 5, 7, 9:
+		fmt.Println("Odd")
+	case 2, 4, 6, 8:
+		fmt.Println("Even")
+	}
+}
+
+func demo006For() {
+	fmt.Println("\ndemo006For")
+	for i := 0; i <= 100; i++ {
+		if i == 88 {
+			break
+		}
+		if i%3 == 0 {
+			continue
+		}
+		fmt.Println(i)
+	}
+}
 
 //This is main function, will start first when your program start
 func main() {
 	demo001Type()
 	demo002Array()
 	demo003Slice()
+	demo004If()
+	demo005Switch()
+	demo006For()
 }
 
 /*
